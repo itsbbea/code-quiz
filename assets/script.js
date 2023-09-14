@@ -7,11 +7,9 @@ function displayQuestion(questionIndex) {
 
     var choicesList = document.getElementById("choices");
     choicesList.innerHTML = ""; // *Clears previous choices*
-    function checkAnswer() {
     
-    }
     currentQuestion.choices.forEach(function (choice, index) {
-        var listItem = document.createElement("li");
+        var listItem = document.createElement("button");
         listItem.textContent = choice;
         listItem.id = "choice-" + (index + 1);
         listItem.addEventListener("click" , checkAnswer)
@@ -42,6 +40,12 @@ function checkAnswer(event) {
     if (selectedChoice === currentQuestion.answer) {
         // Correct answer, so increment the score
         score++;
+        alert("Correct!")
+    }
+
+    else {
+        secondsLeft -= 15;
+        alert ("Incorrect")
     }
 
     // Increment the current question index
@@ -55,6 +59,7 @@ function checkAnswer(event) {
         // All questions have been answered, show the user's score or do something else
         alert("Quiz completed! Your score is: " + score);
     }
+    
 }
 
 // Add an event listener to the "Start Quiz" button
@@ -91,14 +96,14 @@ function setTime() {
 
 }
 
-// Attach the event listener to each answer choice when displaying questions
-currentQuestion.choices.forEach(function (choice, index) {
-    console.log(currentQuestion)
-    var listItem = document.createElement("li");
-    listItem.textContent = choice;
-    listItem.id = "choice-" + (index + 1);
-    listItem.addEventListener("click", checkAnswer); // Attach click event to check answer
-    choicesList.appendChild(listItem);
-});
+// // Attach the event listener to each answer choice when displaying questions
+// currentQuestion.choices.forEach(function (choice, index) {
+//     console.log(currentQuestion)
+//     var listItem = document.createElement("li");
+//     listItem.textContent = choice;
+//     listItem.id = "choice-" + (index + 1);
+//     listItem.addEventListener("click", checkAnswer); // Attach click event to check answer
+//     choicesList.appendChild(listItem);
+// });
 
 
