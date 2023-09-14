@@ -23,7 +23,6 @@ displayQuestion(0);
 // Get references to the sections
 var introSection = document.getElementById("intro-section");
 var questionSection = document.getElementById("question-section");
-console.log(questionSection)
 
 // Get reference to the "Start Quiz" button
 
@@ -38,7 +37,7 @@ function checkAnswer(event) {
     var currentQuestion = questions[currentQuestionIndex];
 
     if (selectedChoice === currentQuestion.answer) {
-        // Correct answer, so increment the score
+        // Correct answer, increment the score
         score++;
         alert("Correct!")
     }
@@ -52,14 +51,19 @@ function checkAnswer(event) {
     currentQuestionIndex++;
 
     // Check if there are more questions to display
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex !== questions.length) {
+
+    
         // Move to the next question
         displayQuestion(currentQuestionIndex);
     } else {
         // All questions have been answered, show the user's score or do something else
+        endQuiz();
         alert("Quiz completed! Your score is: " + score);
+        
     }
     
+
 }
 
 // Add an event listener to the "Start Quiz" button
@@ -79,9 +83,9 @@ var timerEl = document.querySelector("#timer");
 var mainEl = document.getElementById("question-section");
 
 var secondsLeft = 60;
-
+var timerInterval
 function setTime() {
-    var timerInterval = setInterval(function() {
+    timerInterval = setInterval(function() {
         secondsLeft--;
         // secondsLeft = secondsLeft -10;
         timerEl.textContent = "Time " + secondsLeft ;
@@ -96,14 +100,34 @@ function setTime() {
 
 }
 
-// // Attach the event listener to each answer choice when displaying questions
-// currentQuestion.choices.forEach(function (choice, index) {
-//     console.log(currentQuestion)
-//     var listItem = document.createElement("li");
-//     listItem.textContent = choice;
-//     listItem.id = "choice-" + (index + 1);
-//     listItem.addEventListener("click", checkAnswer); // Attach click event to check answer
-//     choicesList.appendChild(listItem);
-// });
+function endQuiz() {
+    clearInterval(timerInterval);
+    console.log("end quiz")
+
+    var userScore = score; 
+
+    // Display the user's score
+    // alert(scoreMessage);
+
+    var endSection = document.getElementById("end-section");
+
+    endSection.style.display = "block"
+    questionSection.style.display = "none"
+    var userScoreEl = document.getElementById("user-score");
+    userScoreEl.textContent = userScore
+
+
+    
+    // Add an event listener to the submit button
+    submitButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+        var userInitials = initialsInput.value;
+        alert("User's initials: " + userInitials);
+    });
+
+}
+
+
+
 
 
