@@ -14,7 +14,7 @@ An online quiz game testing users on their basic knowledge of JavaScript. It inc
 N/A
 
 ## Usage
-To access the code, please follow the URL:  
+To access the code, please follow the URL: https://itsbbea.github.io/code-quiz/ 
 
 ## Credits
 N/A
