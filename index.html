@@ -9,30 +9,139 @@
 </head>
 
 <body>
-    <header section class="header">
-        <button>
-       View Highscores
+
+    <!----------Top Header------------------>
+    <header section class="header-section">
+        <button id="view-highscores">
+            View Highscores
         </button>
+        <div id=timer>
+            <span>Timer:</span>
+        </div>
     </header>
 
-    <section>
-        <h1 id="code-title">
+    <section id="intro-section">
+        <!----- Introductory text here ----->
+        <h1 id="quiz-title">
             Coding Quiz Challenge
         </h1>
         <p class="description">
-            Try to answer the following code related questions within the time limit. Keep in mind that incorrect
+            Try to answer the following code related questions within the time limit. 
+            <br>Keep in mind that incorrect
             answers
-            will penalize your time by ten seconds.
+            will penalize your time by ten seconds!
         </p>
-    </section>
-
-    <section class="start-quiz">
-        <button>
+        <button id="start-button">
             Start Quiz
         </button>
     </section>
 
-<script src="./assets/script.js"></script>
+    <!-------------Questions Here-------------->
+    <section id="question-section" style="display: none;">
+         <div>
+            <h3 id="question"></h3>
+            <ul id="choices"></ul>
+
+            <div>
+                <h3 id="question">Commonly used data types DO NOT include:</h3>
+                <ul id="choices">
+                    <div>
+                    <li>
+                        <button id="choice-1">booleans</button>
+                    </li>
+                    <li>
+                        <button id="choice-2">strings</button>
+                    </li>
+                    <li>
+                        <button id="choice-3">alerts</button>
+                    </li>
+                    <li>
+                        <button id="choice-4">numbers</button>
+                    </li>
+                </ul>
+                </div>
+
+                <div>
+                <h3 id="question">The condition in an if / else statement is encolsed within _______.</h3>
+                <ul id="choices">
+                    <li>
+                    <button id="choice-1">quotes</button>
+                    </li>
+                    <li>
+                    <button id="choice-2">curly brackets</button>
+                </li>
+                <li>
+                    <button id="choice-3">parenthesis</button>
+                </li>
+                <li>
+                    <button id="choice-4">square brackets</button>
+                </li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 id="question">Arrays in JavaScript can be used to store _______.</h3>
+                <ul id="choices">
+                    <li>
+                    <button id="choice-1">numbers and strings</button>
+                    </li>
+                    <li>
+                    <button id="choice-2">other arrays</button>
+                </li>
+                <li>
+                    <button id="choice-3">booleans</button>
+                </li>
+                <li></li>
+                    <button id="choice-4">all of the above</button>
+                </li>
+
+                </ul>
+            </div>
+    
+            <div>
+                <h3 id="question">String values must be enlosed within _______ when being assigned to variables.</h3>
+                <ul id="choices">
+                    <li>
+                    <button id="choice-1">commas</button>
+                    </li>
+                    <li>
+                    <button id="choice-2">curly brackets</button>
+                </li>
+                <li>
+                    <button id="choice-3">quotes</button>
+                </li>
+                <li>
+                    <button id="choice-4">parenthesis</button>
+                </li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 id="question">A very useful tool used during development and debugging for printing content to the
+                    debugger is:</h3>
+                <ul id="choices">
+                    <li>
+                    <button id="choice-1">JavaScript</button>
+                    </li>
+                    <li>
+                    <button id="choice-2">terminal/bash</button>
+                </li>
+                <li>
+                    <button id="choice-3">for loops</button>
+                </li>
+                <li>
+                    <button id="choice-4">console.log</button>
+                </li>
+                </ul>
+            </div>
+    
+        </section>
+    
+    </section>
+
+    <script src="./assets/questions.js"></script>
+    <script src="./assets/script.js"></script>
+   
 
 </body>
 
@@ -57,5 +166,4 @@
 
 
 
-
-    </html>
+</html>

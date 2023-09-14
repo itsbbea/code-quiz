@@ -6,7 +6,7 @@ var questions = [
     },
 
     {
-        question: "The condition in an if / else statement is encolsed within ________.",
+        question: "The condition in an if / else statement is encolsed within _______.",
         choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
         answer: "curly brackets"
 

@@ -1,9 +1,26 @@
-* {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
-.header {margin: 20px;
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#view-highscores {padding: 5px;
+    font-size: 15px;
+    font-weight: 100%;
+    border: solid 2px black;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    background-color: rgb(55, 24, 83);
+
+}
+#timer {padding-right: 25px;
 font-size: 20px;}
 
- #code-title {margin: 50px;
+ #quiz-title {margin: 20px;
     text-align: center;
     font-size: 30px;
 }
@@ -17,16 +34,82 @@ font-size: 20px;}
     text-align: center;
 }
 
-#score {margin: 60px;
-    text-align: center;
+
+
+#intro-section {
+    text-align: center; /* Center-align the content inside the intro-section */
 }
 
-#user-score {
-    text-align: center;
+#start-button {
+    /* Additional button styles */
+    padding: 5px;
+    font-size: 100%;
+    font-weight: 30px;
+    border: solid 2px black;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    background-color: rgb(55, 24, 83);
+}
+
+
+/*   highscore.html CSS styling:  */
+
+body {display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 90px;
 
 }
 
-.button-restart {
+#main-title {
     text-align: center;
     font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.score-list {
+    text-align: center;
+    background-color: rgb(225, 209, 240);
+
+} 
+
+.section-button {display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 30px;
+    
+}
+
+#button-1 {padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    background-color: rgb(55, 24, 83);
+}
+
+#button-2 {padding: 5px;
+    font-size: 15px;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    background-color: rgb(55, 24, 83);
+}
+
+.question-section {display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#question {display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#choices {list-style: none;
+    text-align: center;
+    text-decoration: none;
+
 }
